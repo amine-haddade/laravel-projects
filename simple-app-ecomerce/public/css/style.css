@@ -1,0 +1,356 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+body{
+    width: 100%;
+}
+header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding:10px 5px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(16px); /* Blur effect */
+    -webkit-backdrop-filter: blur(16px);
+    background-color: rgba(255, 255, 255, 0.215);
+}
+header .col-1 .logo{
+   display: flex;
+   align-items: center;
+   font-size: 25px;
+}
+header .col-1 .logo i{
+   margin-right: 10px;
+   font-size: 30px;
+}
+header .col-1{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    padding-left: 20px;
+    color: rgb(20, 20, 20);
+}
+header .col-1 li{
+    cursor: pointer;
+}
+header .col-1 li a{
+    color: rgb(20, 20, 20);
+    text-decoration: none;
+    font-size: 20px;
+}
+header .col-2{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    color: rgb(20, 20, 20);
+}
+header .col-2 #serch-input{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(215, 214, 214, 0.533);
+    padding: 8px 10px;
+    padding-left: 20px;
+    border-radius: 8px;
+    font-size: 25px;
+    background-color: white;
+}
+header .col-2 #serch-input input{
+    background: none;
+    outline: none;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    color: rgb(61, 61, 61);
+}
+header .col-2 #serch-input i{
+    color: grey;
+}
+.text-danger{
+    color: red !important;
+}
+header .col-2 .box-icon-panier{
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid rgba(215, 212, 212, 0.671);
+    margin-right: 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+#banner-home-page{
+    width: 100%;
+    height: 500px;
+    padding: 0px 10px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background: #ec008c;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.banner-home-page-books{
+    background: #318CE7 !important;  /* fallback for old browsers */
+}
+#banner-home-page h1{
+    font-size: 90px;   
+}
+#banner-home-page p{
+    font-size: 28px;
+    font-weight: 300;
+    text-wrap: wrap;
+    padding-left: 30%;
+    max-width: 80%;  
+}
+.prductsHomePages{
+    margin: 50px 0px;
+    width: 100%;
+    padding: 10px 20px;
+}
+.prductsHomePages #title-products-home-page{
+    font-size: 60px;
+    color: black;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+}
+.prductsHomePages .products{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.prductsHomePages .products .singl-product{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    height: fit-content;
+    padding: 10px;
+    gap: 10px;
+    border: 1px solid rgba(188, 188, 188, 0.533);
+    border-radius: 8px;
+}
+.prductsHomePages .products .singl-product img{
+    width: 100%;
+    padding-bottom: 10px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.prductsHomePages .products .singl-product h1 {
+    font-size: 25px;
+    min-height: 60px;
+    max-height: 60px; /* This ensures the title does not exceed 60px */
+    overflow: hidden; /* Hide any overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis for long text */
+    display: -webkit-box;
+    --webkit-line-clamp: 2; /* Limit the title to 2 lines */
+    --webkit-box-orient: vertical;
+    word-wrap: break-word; /* Break long words if necessary */
+}
+
+.prductsHomePages .products .singl-product .prix{
+        font-size: 25px;
+    font-weight: 700;
+}
+.prductsHomePages .products .singl-product button{
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.logo a,.logo i{
+    text-decoration: none;
+    color: rgb(49, 162, 255);
+}
+.prductsHomePages .products .singl-product button:hover{
+    background-color: rgb(56, 56, 56);
+}
+.btn-danger{
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ff3067;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1055px)  {
+    header{
+        position: sticky;
+        justify-content: center;
+        flex-direction: column-reverse;
+        top: 0;
+        gap: 15px;
+
+    }
+    header .col-1{
+        padding-left: 0px !important;
+    }
+    header .col-2 .box-icon-panier {
+        margin-right: 0px !important;
+    }
+    header .col-1 {
+        gap: 10px;
+        font-size: 16px;
+    }
+    #banner-home-page{
+        height: 400px; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    #banner-home-page h1{
+        font-size: 50px;   
+    }
+    #banner-home-page p{
+        font-size: 22px;
+        font-weight: 300;
+        text-wrap: wrap;
+        padding-left: 30%;
+        max-width: 80%;  
+    }
+
+    
+}
+@media screen and (max-width:500px) {
+    header .col-2 #serch-input {
+        width: 70%;
+        min-width:200px;
+        gap: 8px;
+        border: 1px solid rgba(215, 214, 214, 0.533);
+        padding: 6px 8px;
+        padding-left: 10px;
+        border-radius: 6px;
+        font-size: 20px;
+        background-color: white;
+    }
+}
+
+/*books*/
+
+.prductsHomePages-books .products-books{
+    display: grid;
+    gap: 20px;
+    padding: 0px 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.prductsHomePages-books .products-books .singl-product-books{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    height: fit-content;
+    padding: 10px;
+    gap: 10px;
+    border: 1px solid rgba(188, 188, 188, 0.533);
+    border-radius: 8px;
+}
+.prductsHomePages-books .products-books .singl-product-books .image-books{
+    width: 100%;
+    padding-bottom: 10px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.prductsHomePages-books .products-books .singl-product-books .image-books img{
+    width: 70%;
+    height: 100%;
+    padding-bottom: 10px;
+    justify-items: center;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Ajoute une transition pour l'effet de zoom */
+
+    border-radius: 8px;
+}
+.prductsHomePages-books .products-books .singl-product-books .image-books img:hover{
+    transform: scale(1.2); /* Zoom sur l'image sans changer sa taille */
+
+}
+.prductsHomePages-books .products-books .singl-product-books .books-down{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+.prductsHomePages-books .products-books .singl-product-books .books-down a {
+
+    width: 45%;
+    text-decoration: none;
+    border: none;
+    
+
+
+}
+.prductsHomePages-books .products-books .singl-product-books .books-down a button{
+    padding: 10px;
+    color: black;
+    border: 1px solid rgba(210, 210, 210, 0.798);
+    background-color: white;
+    transition: 0.4s;
+    text-decoration: none;
+    width: 100%;
+}
+.prductsHomePages-books .products-books .singl-product-books .books-down a i{
+    padding-right: 8px;
+    font-size: 20px;
+}
+.prductsHomePages-books .products-books .singl-product-books .books-down button:hover{
+    background-color: #d8cccfa3;
+}
+.prductsHomePages-books .products-books .singl-product-books h1 {
+    font-size: 25px;
+    min-height: 30px;
+    max-height: 30px; /* This ensures the title does not exceed 60px */
+    overflow: hidden; /* Hide any overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis for long text */
+    display: -webkit-box;
+    --webkit-line-clamp: 2; /* Limit the title to 2 lines */
+    --webkit-box-orient: vertical;
+    word-wrap: break-word; /* Break long words if necessary */
+}
+
+.prductsHomePages-books .products-books .singl-product-books .prix{
+    font-size: 25px;
+    font-weight: 700;
+}
+.prductsHomePages-books .products-books{
+    padding-top: 50px;
+}
+.prductsHomePages-books .products-books .singl-product-books button{
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.logo a,.logo i{
+    text-decoration: none;
+    color: rgb(49, 162, 255);
+}
+.prductsHomePages-books .products-books .singl-product-books button:hover{
+    background-color: rgb(56, 56, 56);
+}
